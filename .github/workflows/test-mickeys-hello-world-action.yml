@@ -1,0 +1,25 @@
+name: "Test Mickeys Hello World Action"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mickeys-hello_world_test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+      - name: "Run Hello World Action"
+        id: hello
+        uses: ./
+        with:
+          name: "Mickey"
+      - name: "Check the output"
+        run: |
+          echo "The output is ${{ steps.hello.outputs.phrase }}"
+          if [ "${{ steps.hello.outputs.phrase }}" != "Hello, Mickey!" ]; then
+            echo "Unexpected output"
+            exit 1
+          fi
+          echo "Output as expected"
+          exit 0
