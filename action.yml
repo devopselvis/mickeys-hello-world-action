@@ -1,0 +1,13 @@
+name: "Mickeys Hello World Action"
+description: 'A simple "Hello World" action from Mickey!'
+inputs:
+  name:
+    description: "Name to say hello to"
+    required: true
+    default: "World"
+outputs:
+  phrase:
+    description: "The final hello phrase, including the name"
+runs:
+  using: "node20"
+  main: "index.js"

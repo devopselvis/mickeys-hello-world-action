@@ -1,0 +1,16 @@
+{
+  "name": "mickeys-hello-world-action",
+  "version": "1.0.0",
+  "description": "I am a simple demo of a custom javascript action that is deployed to the marketplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
+  }
+}
